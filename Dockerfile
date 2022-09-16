@@ -9,7 +9,7 @@ RUN apt-get install -y \
   man curl wget unzip tar ca-certificates libtool lsb-release perl git texinfo \
   clang-13 clang-format-13 clang-tidy-13 software-properties-common \
   build-essential make ninja-build pkg-config autoconf bc bison flex \
-  device-tree-compiler gawk tree \
+  device-tree-compiler gawk tree openjdk-17-jdk openjdk-17-jre \
   libfl2 libfl-dev libssl-dev libgmp-dev zlib1g-dev libsqlite3-dev \
   zstd libzstd-dev libcurl4-openssl-dev libmicrohttpd-dev libarchive-dev \
   libdebuginfod-dev
@@ -26,6 +26,7 @@ RUN ln -s /usr/bin/lld-13 /usr/bin/ld.lld
 
 COPY *.sh /tmp/
 
+RUN /tmp/scala.sh
 RUN /tmp/dromajo.sh
 RUN /tmp/cmake.sh
 RUN /tmp/libdwarf.sh
