@@ -3,7 +3,7 @@
 
 set -ex
 
-VERILATOR_VER=4.110
+VERILATOR_VER=4.226
 
 cd /tmp
 wget https://github.com/verilator/verilator/archive/v$VERILATOR_VER.tar.gz
