@@ -11,7 +11,7 @@ RUN apt-get install -y \
   libssl-dev libgmp-dev libmpfr-dev libmpc-dev zlib1g-dev libsqlite3-dev zstd \
   libzstd-dev libcurl4-openssl-dev libmicrohttpd-dev libarchive-dev \
   libdebuginfod-dev apt-transport-https gnupg python3-pip \
-  sudo cpio rsync kmod lzop
+  sudo cpio rsync kmod lzop parallel
 RUN apt-get clean
 
 RUN ln -s /usr/bin/clang-13 /usr/bin/clang
